@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EquiposInformaticos.MainPage"
+             Title="Equipos Informáticos">
+
+    <StackLayout>
+        <Frame BackgroundColor="#262626" Margin="0,0,0,-7">
+            <StackLayout >
+
+                <Label Text="Equipos Informáticos" FontSize="Title" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
+
+                <BoxView BackgroundColor="White" 
+                         CornerRadius="15" 
+                         HeightRequest="3"
+                         Margin="0,8"></BoxView>
+
+                <Label Text="A continuación, tenemos una serie de listado de componentes necesarios para el funcionamiento de una Computadora de Escritorio:"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"></Label>
+            </StackLayout>
+        </Frame>
+
+
+        <ScrollView>
+            <StackLayout Margin="0,0,0,0">
+                <StackLayout.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#262626" Offset="0.1"/>
+                        <GradientStop Color="#002060" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </StackLayout.Background>
+
+
+                <!--Componentes Externos-->
+
+                <Frame BackgroundColor="#203864" 
+                       CornerRadius="15" 
+                       Margin="10,10">
+                       
+                    
+                    <Label Text="Componentes Externos"
+                           FontSize="Subtitle"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"></Label>
+                </Frame>
+                
+                
+                <BoxView BackgroundColor="white" 
+                             CornerRadius="15" 
+                             HeightRequest="3"
+                             Margin="0,8"></BoxView>
+
+                <Grid Margin="0,0" Padding="10" ColumnSpacing="20" RowSpacing="20">
+
+                   
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition  Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0" Grid.Column="0" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15" >
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="caja" WidthRequest="60" VerticalOptions="Center" BackgroundColor="#00000000" x:Name="Case" Clicked="Case_clicked"></ImageButton>
+                            <Label Text="Caja de Computadora" HorizontalTextAlignment="Center" TextColor="White" ></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="0" Grid.Column="1" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15">
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="mouse" WidthRequest="100" VerticalOptions="Center" BackgroundColor="#00000000" Clicked="Mouse"></ImageButton>
+                            <Label Text="Mouse o Ratón" HorizontalTextAlignment="Center"  TextColor="White"></Label>
+                        </StackLayout>
+                    </Frame>
+
+ 
+                    <Frame Grid.Row="1" Grid.Column="0" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15" >
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="teclado" WidthRequest="120" VerticalOptions="Center" BackgroundColor="#00000000" x:Name="keyboard" Clicked="keyboard_clicked"></ImageButton>
+                            <Label Text="Teclado Mécanico" HorizontalTextAlignment="Center" TextColor="White" ></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="1" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15">
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="monitor" WidthRequest="130" VerticalOptions="Center" BackgroundColor="#00000000" Clicked="Screen"></ImageButton>
+                            <Label Text="Monitor" HorizontalTextAlignment="Center"  TextColor="White"></Label>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+
+                
+                
+                <!--Componentes Internos--> 
+                
+                <Frame BackgroundColor="#203864" 
+                       CornerRadius="15" 
+                       Margin="10,35,10,10">
+
+
+                    <Label Text="Componentes Internos"
+                           FontSize="Subtitle"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"></Label>
+                </Frame>
+
+                <BoxView BackgroundColor="white" 
+                             CornerRadius="15" 
+                             HeightRequest="3"
+                             Margin="0,8"></BoxView>
+
+                <Grid Margin="0,0" Padding="10" ColumnSpacing="20" RowSpacing="20">
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition  Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0" Grid.Column="0" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15" >
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="motherboard" WidthRequest="80" VerticalOptions="Center" BackgroundColor="#00000000" Clicked="Motherboard"></ImageButton>
+                            <Label Text="Tarjeta Madre" HorizontalTextAlignment="Center" TextColor="White" ></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="0" Grid.Column="1" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15">
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="ram" WidthRequest="80" VerticalOptions="Center" BackgroundColor="#00000000" Clicked="RAM"></ImageButton>
+                            <Label Text="RAM" HorizontalTextAlignment="Center"  TextColor="White"></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    
+                    <Frame Grid.Row="1" Grid.Column="0" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15" >
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="processor" WidthRequest="70" VerticalOptions="Center" BackgroundColor="#00000000" Clicked="Processor"></ImageButton>
+                            <Label Text="Procesador" HorizontalTextAlignment="Center" TextColor="White" ></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="1" BorderColor="White" BackgroundColor="#00000000" CornerRadius="15">
+                        <StackLayout VerticalOptions="End">
+                            <ImageButton Source="hardrive" WidthRequest="100" VerticalOptions="Center" BackgroundColor="#00000000" Clicked="hardrive"></ImageButton>
+                            <Label Text="Disco Duro" HorizontalTextAlignment="Center"  TextColor="White"></Label>
+                        </StackLayout>
+                    </Frame>
+
+                </Grid>
+
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>
