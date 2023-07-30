@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.MainPage"
+             Title="Login">
+
+    <ScrollView>
+        <!--Intro-->
+        <StackLayout BackgroundColor="#191919">
+            <Frame BorderColor="White" Margin="20" BackgroundColor="Transparent">
+                <Label Text='"Login with  your Account to watch something Interesting"' 
+                       FontAttributes="Italic" FontSize="16" TextColor="White" HorizontalTextAlignment="Center"></Label>
+            </Frame>
+
+            <!--Login Section-->
+            <Frame BorderColor="#4472C4" BackgroundColor="#1B2025" Margin="10,10">
+                <StackLayout Padding="5" >
+                    <Image Source="security" WidthRequest="70" ></Image>
+                    <Label Text="Login" FontSize="40" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center"></Label>
+                    <BoxView BackgroundColor="White" HeightRequest="3" Margin="5,0" CornerRadius="15"></BoxView>
+
+                    <Frame BorderColor="#2DC56C" Margin="10,10" BackgroundColor="Transparent" CornerRadius="30">
+                        <Entry Placeholder="Username" PlaceholderColor="#7F7F7F" TextColor="white" x:Name="txtUsername"></Entry>
+                    </Frame>
+
+                    <Frame BorderColor="#2DC56C" Margin="10,0" BackgroundColor="Transparent" CornerRadius="30">
+                        <Entry Placeholder="Password" PlaceholderColor="#7F7F7F" TextColor="white" IsPassword="True" x:Name="txtPassword"></Entry>
+                    </Frame>
+
+                    <Button Text="Sign in" TextColor="White" BackgroundColor="#4472C4" Margin="30" CornerRadius="40" 
+                            x:Name="sigIn" Clicked="checkAccount"></Button>
+
+                </StackLayout>    
+            </Frame>
+        
+        
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
