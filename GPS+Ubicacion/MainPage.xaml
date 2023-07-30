@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GPS.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#191919" VerticalOptions="FillAndExpand">
+
+
+                <!--Agregar Border Color Brillante, Contenedor se adapte al Contenido, Incrementar tamaño frame-->
+                <Frame BackgroundColor="#1B2025" BorderColor="Red"  CornerRadius="45" Margin="10,10" HasShadow="True">
+                    <Label Text="Ubicación GPS - Demo"  HorizontalTextAlignment="Center" TextColor="White" FontSize="Title" FontAttributes="Bold"/>
+                </Frame>
+                <!--Quitar Bordes-->
+                <Image Source="gps"  Aspect="Fill"                             
+                            HeightRequest="{OnPlatform Android =200}"
+                            WidthRequest="{OnPlatform Android =350}"
+                       HorizontalOptions="Center"
+                       />
+
+                <Label Text="Latitud y Longitud"  HorizontalTextAlignment="Center" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+                <BoxView BackgroundColor="White" HeightRequest="2"  Margin="20,15"></BoxView>
+
+                <!--Cambiar de color la linea del Entry -->
+                <!--Latitud-->
+                <Frame BackgroundColor="Transparent" BorderColor="#289957" CornerRadius="50" Margin="10,0">
+                    <Entry Placeholder="Latitud" PlaceholderColor="#D0CECE" TextColor="White" BackgroundColor="Transparent" Keyboard="Numeric" x:Name="inputLat" 
+                           />
+                </Frame>
+
+                <!--Longitud-->
+                <Frame BackgroundColor="Transparent" BorderColor="#289957" CornerRadius="50" Margin="10,20">
+                    <Entry Placeholder="Longitud" PlaceholderColor="#D0CECE" TextColor="White" BackgroundColor="Transparent" Keyboard="Numeric" x:Name="inputLong" 
+                           />
+                </Frame>
+
+
+                <Button Text="Buscar" x:Name="btnAbrir" Clicked="btnAbrir_Clicked" 
+                        FontSize="20" BackgroundColor="#2F80B7" BorderWidth="5" CornerRadius="25" WidthRequest="150" HeightRequest="60"
+                        TextColor="White" Margin="20"
+                        />
+
+                <BoxView BackgroundColor="White" HeightRequest="2"  Margin="20,15"></BoxView>
+
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="10,0,10,15">
+
+                    <Frame BackgroundColor="#C80D1A" CornerRadius="50" Padding="7">
+                        <ImageButton Source="mylocation" WidthRequest="60" HorizontalOptions="Fill" Aspect="AspectFit" BackgroundColor="Transparent" Clicked="mostrarUbicacion"></ImageButton>
+                    </Frame>
+                    <Label Text="Obtener “Mi” Ubicacion" VerticalOptions="Center" TextColor="White" FontSize="16" FontAttributes="Italic" />
+
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="Lat" TextColor="#289957" FontSize="16" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+                    <Label x:Name="Long" TextColor="#289957" FontSize="16" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+
+                    
+                </StackLayout>
+                
+
+                <StackLayout HorizontalOptions="End" Padding="0,0,10,0">
+                    <Label Text="Butch Fleischauer Cordero" VerticalOptions="Center" TextColor="White" FontSize="14" FontAttributes="Italic"></Label>
+                    <BoxView BackgroundColor="White" HeightRequest="2"  Margin="0,-5"></BoxView>
+                    <Label Text="Dev. Movil Applications" VerticalOptions="Center" TextColor="White" FontSize="14" FontAttributes="Italic"></Label>
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+</ContentPage>
