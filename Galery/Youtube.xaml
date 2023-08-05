@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GaleriaImagenes.Youtube"
+             Title="Youtube"
+             BackgroundColor="Red">
+    <ContentPage.Content>
+        <StackLayout>
+            <WebView Source="https://www.youtube.com/watch?v=WMcRjw8tKqc" VerticalOptions="FillAndExpand"></WebView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
