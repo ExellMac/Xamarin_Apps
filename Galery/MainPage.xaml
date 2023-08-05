@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xamd.ImageCarousel.Forms.Plugin.Abstractions;assembly=Xamd.ImageCarousel.Forms.Plugin.Abstractions"
+             x:Class="GaleriaImagenes.MainPage"
+             Title="The Beaty of the Universe">
+
+
+        <StackLayout BackgroundColor="#111929">
+            <Image Source="Title" HorizontalOptions="CenterAndExpand"></Image>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5,10">
+                <Label Text="Butch Fleischauer Cordero"
+                       HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"></Label>
+
+                <BoxView WidthRequest="2" HeightRequest="2" BackgroundColor="White" ></BoxView>
+
+            <Label Text="21-mism-1-076"
+                       HorizontalTextAlignment="Center" TextColor="White" FontSize="16" FontAttributes="Bold"></Label>
+
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+            <controls:ImageCarousel x:Name="spaceSlider"  />
+        </StackLayout>
+
+ 
+            
+            <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Padding="3">
+            <ImageButton Source="wikipedia.png" WidthRequest="50" BackgroundColor="Transparent" Clicked="wikipedia_btn"></ImageButton>
+                <ImageButton Source="Nasa" HeightRequest="50" BackgroundColor="Transparent" Clicked="nasa_btn"></ImageButton>
+                <ImageButton Source="Youtube" WidthRequest="50" BackgroundColor="Transparent" Clicked="youtube_btn"></ImageButton>
+                <ImageButton Source="gigachad" WidthRequest="50" BackgroundColor="Transparent" Clicked="gigachad_btn"></ImageButton>
+            </StackLayout>
+
+
+
+    </StackLayout>
+
+
+
+</ContentPage>
