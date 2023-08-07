@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadoraBasica.MainPage">
+
+    <ContentPage.Resources>
+        <Style x:Key="buttoms" TargetType="Button">
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="BackgroundColor" Value="#323232"></Setter>
+        </Style>   
+    </ContentPage.Resources>
+
+    <ScrollView>
+    <StackLayout BackgroundColor="#1B2026">
+        <Frame BackgroundColor="#B14D54">
+            <Label Text="Calculadora Básica" 
+                   FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Center" TextColor="White"></Label>
+        </Frame>
+            <FlexLayout Direction="Column"  JustifyContent="Center" AlignItems="Center" >
+                <Image Source="calculator" WidthRequest="160" VerticalOptions="Start" Margin="0,10,0,5"></Image>
+                <Label Text="Calcuadora basica con las funciones básicas: Suma, Resta, Multiplicacion y División"
+                       TextColor="White" HorizontalTextAlignment="Center" Margin="0,5,0,5" FontSize="16" FontAttributes="Italic"></Label>
+            </FlexLayout>
+
+        <Frame BorderColor="#B14D54" Margin="10" BackgroundColor="Transparent" CornerRadius="12">
+            <StackLayout>
+                <Label Text="Introduce dos Valores" 
+                       HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White"
+                       FontSize="18"></Label>
+                
+                <BoxView Margin="10,0" HeightRequest="3" BackgroundColor="#B14D54"></BoxView>
+
+                <Grid ColumnSpacing="10" HorizontalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                    <Entry Placeholder="Valor 1" PlaceholderColor="#A6A6A6" TextColor="White" Keyboard="Numeric" Grid.Column="0" x:Name="num1"></Entry>
+                    <Entry Placeholder="Valor 2" PlaceholderColor="#A6A6A6" TextColor="White" Keyboard="Numeric" Grid.Column="1" x:Name="num2"></Entry>
+
+                </Grid>
+                
+                 <StackLayout Orientation="Horizontal" Margin="0,16">
+                
+                     <Label Text="Resultado:" FontSize="16" TextColor="White" FontAttributes="Bold" ></Label>
+                
+                     <Label x:Name="res" FontSize="16" TextColor="White" FontAttributes="Bold" ></Label>
+                     
+                 </StackLayout>
+
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Text="+" x:Name="add" Clicked="add_btn" Grid.Row="0" Grid.Column="0"
+                            Style="{StaticResource buttoms}"></Button>
+                   
+                    <Button Text="-" x:Name="rest" Clicked="rest_btn" Grid.Row="1" Grid.Column="0" 
+                            Style="{StaticResource buttoms}"></Button>
+
+                        <Button Text="*" x:Name="mult" Clicked="mult_btn" Grid.Row="0" Grid.Column="1" 
+                            Style="{StaticResource buttoms}"></Button>
+                        
+                    <Button Text="/" x:Name="div" Clicked="div_btn" Grid.Row="1" Grid.Column="1"
+                            Style="{StaticResource buttoms}"></Button>
+
+                    <Button Text="Clr" x:Name="clear" Clicked="clear_btn" Grid.Row="0" Grid.Column="2"
+                            Style="{StaticResource buttoms}"></Button>
+
+                    <Button Text="=" x:Name="result_btn" Grid.Row="1" Grid.Column="2" BackgroundColor="#B14D54"
+                            Style="{StaticResource buttoms}" ></Button>
+                    </Grid>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
