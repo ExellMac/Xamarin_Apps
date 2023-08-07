@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimalesFavoritos.MainPage">
+
+    <!--Definicion de Estilos-->
+    <ContentPage.Resources>
+
+        <Style x:Key="animalImage" TargetType="Image">
+            <Setter Property="WidthRequest" Value="180"></Setter>
+            <Setter Property="HorizontalOptions" Value="Center"></Setter>
+        </Style>
+
+        <Style x:Key="animalName" TargetType="Label">
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+        </Style>
+
+        <Style x:Key="boxviewLine" TargetType="BoxView">
+            <Setter Property="WidthRequest" Value="300"></Setter>
+            <Setter Property="Margin" Value="0,7"></Setter>
+            <Setter Property="HeightRequest" Value="3"></Setter>
+        </Style>
+
+        <Style x:Key="animalDescription" TargetType="Label">
+            <Setter Property="TextColor" Value="#333333"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+        </Style>
+
+        <Style x:Key="buttom" TargetType="Button">
+            <Setter Property="WidthRequest" Value="250"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="Margin" Value="0,15,0,10"></Setter>
+            <Setter Property="CornerRadius" Value="15"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+        </Style>
+
+
+    </ContentPage.Resources>
+
+
+
+
+    <StackLayout>
+        <Frame BackgroundColor="red" >
+            <Image Source="Dogs" Margin="-20"></Image>
+        </Frame>
+
+        <Frame BackgroundColor="#C5787E" CornerRadius="10" Margin="10,-40,10,5">
+            <Label Text="Razas de Perros | Mis Favoritos"
+                   HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" ></Label>
+        </Frame>
+
+        <ScrollView Orientation="Both">
+
+            <FlexLayout>
+
+                <!--PASTOR ALEMAN-->
+                <Frame CornerRadius="8" BorderColor="#C69766" Margin="10,5" WidthRequest="300">
+                    <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+                        
+                        <Image Source="pastoraleman"
+                               Style="{StaticResource animalImage}"></Image>
+
+                        <Label Text="Pastor Aleman" TextColor="#C69766"
+                               Style="{StaticResource animalName}"></Label>
+
+
+                        <BoxView BackgroundColor="#C69766"
+                                 Style="{StaticResource boxviewLine}"></BoxView>
+
+                            <Label Text="&#x2022; Al observar a un perro pastor alemán, pocas personas se detienen a pensar que fue criado para conducir y proteger rebaños. La mayoría de la gente ve en el pastor alemán a un perro policía, al entrañable amigo de los niños, al compañero fiel capaz de dar la vida por su familia, al lazarillo que ve por su amigo ciego, al rescatista que arriesga su vida por personas que no conoce y al héroe canino por excelencia."
+                                   Style="{StaticResource animalDescription}"></Label>
+                        
+                        <Label FlexLayout.Grow="1"></Label>
+
+                        <Button Text="Leer Mas" BackgroundColor="#C69766" VerticalOptions="End"
+                                Style="{StaticResource buttom}" x:Name="pastorAleman" Clicked="pAleman_btn"></Button>
+                        <Label FlexLayout.Grow="1"></Label>
+
+                    </FlexLayout>
+                </Frame>
+
+                <!--ROTTWEILER-->
+                <Frame CornerRadius="8" BorderColor="#87B0C8" Margin="10,5" WidthRequest="300">
+                    <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+
+                        <Image Source="rottweiler"
+                               Style="{StaticResource animalImage}"></Image>
+
+                        <Label Text="Rottweiler" TextColor="#87B0C8"
+                               Style="{StaticResource animalName}"></Label>
+
+
+                        <BoxView BackgroundColor="#87B0C8"
+                                 Style="{StaticResource boxviewLine}"></BoxView>
+
+                        <Label Text="&#x2022; El rottweiler es un perro fuerte, robusto y atlético. De talla mediana a grande, y con una apariencia que no esconde su gran poder, el rottweiler inspira una enorme admiración entre sus simpatizantes y un temor casi mítico entre quienes no lo conocen. Es indudable que la sola presencia de estos perros impone respeto y es fácil asustarse de un perro tan poderoso."
+                                   Style="{StaticResource animalDescription}"></Label>
+                        
+                        <Label FlexLayout.Grow="2"></Label>
+                        
+                        <Button Text="Leer Mas" BackgroundColor="#87B0C8" 
+                                Style="{StaticResource buttom}" x:Name="rottweiler" Clicked="rottweiler_btn"></Button>
+                        <Label FlexLayout.Grow="1"></Label>
+                        
+                    </FlexLayout>
+                </Frame>
+
+                <!--PITBULL TERRIER-->
+                <Frame CornerRadius="8" BorderColor="#5F371C" Margin="10,5" WidthRequest="300">
+                    <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+
+                        <Image Source="pitbull_terrier"
+                               Style="{StaticResource animalImage}"></Image>
+
+                        <Label Text="Pitbull Terrier Americano" TextColor="#5F371C"
+                               Style="{StaticResource animalName}"></Label>
+
+
+                        <BoxView BackgroundColor="#5F371C"
+                                 Style="{StaticResource boxviewLine}"></BoxView>
+
+                        <Label Text="&#x2022; El pit bull terrier americano es uno de los perros más populares en la actualidad. Aunque cueste de imaginar hoy en día por el estigma que padece, la historia del pit bull empieza en las granjas, como un perro protector del ganado. Posteriormente, se popularizó en las peleas de perros, una práctica indeseable que pareció alejarle de su pasado como perro niñera."
+                                   Style="{StaticResource animalDescription}"></Label>
+
+                        <Label FlexLayout.Grow="1"></Label>
+
+                        <Button Text="Leer Mas" BackgroundColor="#5F371C" VerticalOptions="End"
+                                Style="{StaticResource buttom}" x:Name="pitbull" Clicked="pitbull_btn"></Button>
+                        <Label FlexLayout.Grow="1"></Label>
+
+                    </FlexLayout>
+                </Frame>
+
+                <!--Golden Retriever-->
+                <Frame CornerRadius="8" BorderColor="#CAB9A3" Margin="10,5" WidthRequest="300">
+                    <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+
+                        <Image Source="Golden_retriever"
+                               Style="{StaticResource animalImage}"></Image>
+
+                        <Label Text="Golden Retriever" TextColor="#CAB9A3"
+                               Style="{StaticResource animalName}"></Label>
+
+
+                        <BoxView BackgroundColor="#CAB9A3"
+                                 Style="{StaticResource boxviewLine}"></BoxView>
+
+                        <Label Text="&#x2022; El golden retriever, también conocido como cobrador dorado es originario de Reino Unido, más concretamente de Escocia. Nace alrededor del 1850 con la búsqueda de un perro cobrador y levantador que fuera capaz de no lastimar a la presa. Por ese motivo observamos en él habilidades de caza. También es conocido como perdiguero dorado."
+                                   Style="{StaticResource animalDescription}"></Label>
+
+                        <Label FlexLayout.Grow="1"></Label>
+
+                        <Button Text="Leer Mas" BackgroundColor="#CAB9A3" VerticalOptions="End"
+                                Style="{StaticResource buttom}" x:Name="golden" Clicked="Golden_btn"></Button>
+                        <Label FlexLayout.Grow="1"></Label>
+
+                    </FlexLayout>
+                </Frame>
+
+                <!--DOBERMAN-->
+                <Frame CornerRadius="8" BorderColor="#17141B" Margin="10,5" WidthRequest="300">
+                    <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+
+                        <Image Source="doberman"
+                               Style="{StaticResource animalImage}"></Image>
+
+                        <Label Text="Doberman" TextColor="#17141B"
+                               Style="{StaticResource animalName}"></Label>
+
+                        <BoxView BackgroundColor="#17141B"
+                                 Style="{StaticResource boxviewLine}"></BoxView>
+
+                        <Label Text="&#x2022; El dóberman, conocido también como dóberman pinscher o dobermann, es un perro elegante, musculoso y poderoso. Con un cuerpo compacto y poderoso, el perro dóberman ha cautivado el corazón de muchísimas personas durante muchos años. No obstante, debido a la estigmatización que sufrió la raza, también ha sido uno de los canes más temidos."
+                                   Style="{StaticResource animalDescription}"></Label>
+
+                        <Label FlexLayout.Grow="1"></Label>
+
+                        <Button Text="Leer Mas" BackgroundColor="#17141B" TextColor="White" VerticalOptions="End"
+                                Style="{StaticResource buttom}" x:Name="doberman" Clicked="doberman_btn"></Button>
+                        <Label FlexLayout.Grow="1"></Label>
+
+                    </FlexLayout>
+                </Frame>
+            </FlexLayout>
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>
