@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>    
+<!--CREATED BY: BUTCHER-->
+<!--CODE NUMBER: 21-MISM-1-076-->
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMCCalculator.MainPage"
+             Visual="Material">
+
+    <ScrollView>
+      <StackLayout BackgroundColor="#1B2026">
+          
+          <!--Intro-->
+          <Frame BackgroundColor="#FE860A" Padding="10" CornerRadius="0">
+              <Label Text="Calculadora IMC" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+          </Frame>
+  
+          <Image Source="body_mass_index.png"  HorizontalOptions="Center" WidthRequest="120" Margin="0,15,0,0"/>
+          <BoxView HeightRequest="2" BackgroundColor="#FE860A" Margin="30,20"></BoxView>
+          <Label Text="Body Mass Index o Índice de Masa Corporal es una herramienta utilizada para calcular el rango de salud de una persona basada en su peso y altura." 
+                 FontSize="16" Padding="20,0" FontAttributes="Italic" HorizontalTextAlignment="Center" TextColor="White"/>
+         
+          <!--END OF THE INTRO-->
+          
+          <!--SECTION-->
+          <Frame BorderColor="#FE860A" CornerRadius="5" BackgroundColor="Transparent" Margin="15" >
+              <StackLayout HorizontalOptions="FillAndExpand" >
+                  
+                  <Entry Placeholder="Altura (M)" PlaceholderColor="#BFBFBF" Keyboard="Numeric"
+                         TextColor="White" FontSize="18" BackgroundColor="#1B2026" x:Name="height"></Entry>
+                  
+                  <Entry Placeholder="Peso (Kg)" PlaceholderColor="#BFBFBF" Keyboard="Numeric"
+                         TextColor="White" FontSize="18" BackgroundColor="#1B2026" x:Name="weight"></Entry>
+  
+                  <Entry Placeholder="Tu IMC" PlaceholderColor="#BFBFBF" IsEnabled="False"
+                         TextColor="White" FontSize="18" BackgroundColor="#1B2026" x:Name="result"></Entry>
+                  
+              
+                  <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+  
+                      <Button Text="CALCULAR" TextTransform="Uppercase" BackgroundColor="#4472C4" TextColor="White" FontSize="19"
+                          Margin="0,15,0,5" CornerRadius="10" x:Name="calculate" Clicked="calculate_btn"></Button>
+                      
+                  <Button Text="Limpiar" TextTransform="Uppercase" BackgroundColor="#B14D54" TextColor="White" FontSize="19"
+                          Margin="0,15,0,5" CornerRadius="10" x:Name="clear" Clicked="clear_btn"></Button>
+  
+                  </StackLayout>
+                  
+              </StackLayout>
+          </Frame>
+         
+      </StackLayout>
+    </ScrollView>
+
+</ContentPage>
