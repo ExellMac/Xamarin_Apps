@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ferreteria.Master"
+             Title="Master">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#191919">
+
+            <Button ImageSource="home" Text="Inicio" FontAttributes="Bold" FontSize="16" WidthRequest="1000" HeightRequest="80"
+                    HorizontalOptions="Center" BorderColor="White" CornerRadius="10" BackgroundColor="Transparent"
+                    BorderWidth="2" Padding="5" TextColor="White" Margin="10" VerticalOptions="CenterAndExpand" x:Name="home" Clicked="home_Clicked"></Button>
+
+            <Button ImageSource="tools" Text="Productos y Herramientas" FontAttributes="Bold" FontSize="16" WidthRequest="1000" HeightRequest="80"
+                    HorizontalOptions="Center" BorderColor="White" CornerRadius="10" BackgroundColor="Transparent"
+                    BorderWidth="2" Padding="10" TextColor="White" Margin="10" VerticalOptions="CenterAndExpand" x:Name="tools" Clicked="tools_Clicked"/>
+
+            <Button ImageSource="support" Text="Contáctanos"  FontAttributes="Bold" FontSize="16" WidthRequest="1000" HeightRequest="80"
+                    HorizontalOptions="Center" BorderColor="White" CornerRadius="10" BackgroundColor="Transparent"
+                    BorderWidth="2" Padding="10" TextColor="White" Margin="10" VerticalOptions="CenterAndExpand" x:Name="contact" Clicked="contact_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
