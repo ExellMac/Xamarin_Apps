@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage"
+             Title="🖩Calculator">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttomStyles" TargetType="Button">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BackgroundColor" Value="#595959"/> 
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+
+    <StackLayout BackgroundColor="#1B2026">
+
+        <!--Title + Img -->
+        <Frame  BackgroundColor="Transparent">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="calculator" WidthRequest="40" ></Image>
+                <Label Text="Calculator" VerticalTextAlignment="Center" FontSize="Title" FontAttributes="Bold"  
+                       TextColor="White"></Label>
+            </StackLayout>
+        </Frame>
+
+        <!-- SCREEN -->
+        <Frame BackgroundColor="#202020" BorderColor="White" CornerRadius="5">
+            <Label Text="0" x:Name="resultText" FontSize="Title" HorizontalTextAlignment="End" FontAttributes="Bold" TextColor="White"></Label>
+        </Frame>
+
+
+        <!-- BUTTOMS -->
+        <Frame BorderColor="White" BackgroundColor="Transparent" CornerRadius="5">
+            <StackLayout Padding="-7">
+                <Grid RowSpacing="10">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    
+                    <!--Specific Functions-->
+                    <Button Text="Clr" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            BackgroundColor="#B14D54"  Grid.Row="0" Grid.Column="0" Clicked="OnClear"></Button>
+
+                    <Button Text="√" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            CornerRadius="5" Grid.Row="0" Grid.Column="1" Clicked="OnSquareRoot"></Button>
+
+                    <Button Text="%" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            CornerRadius="5" Grid.Row="0" Grid.Column="2" Clicked="OnPercentage"></Button>
+
+                    <Button Text="x^2" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            CornerRadius="5" Grid.Row="4" Grid.Column="0" Clicked="Potency"></Button>
+
+                    <Button Text="=" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            BackgroundColor="#3497D9" CornerRadius="5" Grid.Row="4" Grid.Column="3" Clicked="OnCalculate"></Button>
+                    
+                    
+                    
+                    
+                    <!--Basic Operators-->
+
+                    <Button Text="÷" FontAttributes="Bold" Style="{StaticResource buttomStyles}" 
+                            CornerRadius="5" Grid.Row="0" Grid.Column="3" Clicked="OnSelectOperator"></Button>
+
+                    <Button Text="*" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            CornerRadius="5" Grid.Row="1" Grid.Column="3" Clicked="OnSelectOperator"></Button>
+
+                    <Button Text="-" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            CornerRadius="5" Grid.Row="2" Grid.Column="3" Clicked="OnSelectOperator"></Button>
+
+                    <Button Text="+" FontAttributes="Bold" Style="{StaticResource buttomStyles}"
+                            CornerRadius="5" Grid.Row="3" Grid.Column="3" Clicked="OnSelectOperator"></Button>
+
+
+
+                    <!-- Numbers-->
+
+                    <Button Text="."  Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                            CornerRadius="5" Grid.Row="4" Grid.Column="2"></Button>
+
+                    <Button Text="0" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                            CornerRadius="5" Grid.Row="4" Grid.Column="1" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="1" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                            CornerRadius="5" Grid.Row="3" Grid.Column="0" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="2" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                             CornerRadius="5" Grid.Row="3" Grid.Column="1" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="3" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                            CornerRadius="5" Grid.Row="3" Grid.Column="2" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="4" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                            CornerRadius="5" Grid.Row="2" Grid.Column="0" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="5" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                             CornerRadius="5" Grid.Row="2" Grid.Column="1" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="6"  Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                             CornerRadius="5" Grid.Row="2" Grid.Column="2" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="7" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                            CornerRadius="5" Grid.Row="1" Grid.Column="0" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="8" Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                             CornerRadius="5" Grid.Row="1" Grid.Column="1" Clicked="OnSelectNumber"></Button>
+
+                    <Button Text="9"  Style="{StaticResource buttomStyles}" BackgroundColor="#323232"
+                            CornerRadius="5" Grid.Row="1" Grid.Column="2" Clicked="OnSelectNumber"></Button>
+
+
+
+                </Grid>                
+            </StackLayout>
+        </Frame>
+        
+    </StackLayout>
+
+</ContentPage>
