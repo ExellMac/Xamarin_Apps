@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sports.Athletes"
+             Title="Atletas ">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1B2026">
+
+            <Image Source="logo"></Image>
+
+            <FlexLayout VerticalOptions="Center" JustifyContent="Center" >
+                <Image Source="athlete" WidthRequest="50" />
+
+                <Label Text="Atleta" VerticalTextAlignment="Center" Padding="5,0"  TextColor="White" FontSize="Title"
+                           FontAttributes="Bold"></Label>
+
+
+            </FlexLayout>
+
+            <BoxView HeightRequest="3" BackgroundColor="White"></BoxView>
+
+            <Label Text=" es una persona que posee salud y condición física. Su cuerpo está sano y tiene desarrolladas sus capacidades físicas tales como la fuerza, resistencia y flexibilidad."
+                               VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="White" FontSize="15"
+                               Margin="10,0"></Label>
+
+            <Grid Margin="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <FlexLayout Direction="Column"  Grid.Column="0">
+                    
+                    <Frame Padding="1" CornerRadius="10" >
+                        <Image Source="usainbolt"></Image>
+                        
+                    </Frame>
+                    <Label Text="Usain Bolt" FontSize="20" TextColor="White" FontAttributes="Bold" Margin="0,5"
+                           HorizontalTextAlignment="Center"></Label>
+
+                    <Button Text="Mas detalles" TextColor="Black" FontSize="16" FontAttributes="Bold" BorderColor="White"
+                        BackgroundColor="#EDE73F" CornerRadius="20" HorizontalOptions="Center" BorderWidth="2"
+                        Margin="10"></Button>
+
+                </FlexLayout>
+
+                <FlexLayout Direction="Column" Grid.Column="1">
+
+                    <Frame Padding="0" CornerRadius="10" >
+                        <Image Source="gigachad" ></Image>
+                    </Frame>
+
+                    <Label Text="GigaChad" FontSize="20" TextColor="White" FontAttributes="Bold" Margin="0,5"
+                           HorizontalTextAlignment="Center"></Label>
+
+                    <Button Text="Mas detalles" TextColor="White" FontSize="16" FontAttributes="Bold" BorderColor="White"
+                        BackgroundColor="#767676" CornerRadius="20" HorizontalOptions="Center" BorderWidth="2"
+                        Margin="10"></Button>
+                    
+                </FlexLayout>
+                
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
