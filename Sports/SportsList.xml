@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sports.SportsList"
+             Title="Deportes">
+    
+    <ContentPage.Content>
+
+        <ScrollView>
+        <StackLayout BackgroundColor="#1B2026">
+
+            <Image Source="logo"></Image>
+
+                <FlexLayout VerticalOptions="Center" JustifyContent="Center" >
+                    <Image Source="Basketball_ball.png" WidthRequest="50" />
+
+                    <Label Text="Basketball" VerticalTextAlignment="Center" Padding="5,0"  TextColor="White" FontSize="Title"
+                           FontAttributes="Bold"></Label>
+                    
+                </FlexLayout>
+                
+                <BoxView HeightRequest="3" BackgroundColor="White"></BoxView>
+                
+                <Label Text="es un deporte de equipo, jugado entre dos conjuntos de cinco jugadores cada uno durante cuatro períodos o cuartos de diez minutos cada unos doce minutos cada cuarto en la NBA. "
+                               VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="White" FontSize="15"
+                               Margin="10,0"></Label>
+               
+
+                    <Frame Margin="5,0" Padding="3" HorizontalOptions="CenterAndExpand" BorderColor="White" CornerRadius="10" BackgroundColor="Transparent" >
+                        <Image Source="basketball" HeightRequest="300" ></Image>
+                    </Frame>
+
+                <Button Text="Mas detalles" TextColor="White" FontSize="18" FontAttributes="Bold" BorderColor="White"
+                        BackgroundColor="#E2021A" CornerRadius="20" HorizontalOptions="Center" WidthRequest="200"
+                        Margin="10"></Button>
+    
+
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
