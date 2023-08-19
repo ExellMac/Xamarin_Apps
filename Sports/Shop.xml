@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sports.Shop" 
+             Title="Tienda">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1B2026">
+
+            <Image Source="logo"></Image>
+
+
+
+
+
+            <FlexLayout VerticalOptions="Center" JustifyContent="Center" >
+                <Image Source="shop" WidthRequest="50" />
+
+                <Label Text="Tienda" VerticalTextAlignment="Center" Padding="5,0"  TextColor="White" FontSize="Title"
+                           FontAttributes="Bold"></Label>
+
+            </FlexLayout>
+
+
+            <Frame Margin="5,0" Padding="1" HorizontalOptions="CenterAndExpand" BorderColor="White" CornerRadius="10" BackgroundColor="Transparent" >
+                <Image Source="fifaball"  ></Image>
+            </Frame>
+
+            <Label Text="Al Rihla &#10;Balón Copa Mundial FIFA 2022:" HorizontalTextAlignment="Center" Padding="5,0"  TextColor="White" FontSize="20"
+                           FontAttributes="Bold"></Label>
+
+            <Label Text="USD$165" HorizontalTextAlignment="Center" Padding="5,0"  TextColor="#2BB464" FontSize="20"
+                           FontAttributes="Bold"></Label>
+
+            <Button Text="Mas detalles" TextColor="White" FontSize="18" FontAttributes="Bold" BorderColor="White"
+                        BackgroundColor="#00B0F0" CornerRadius="20" HorizontalOptions="Center" WidthRequest="200"
+                        Margin="10"></Button>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
