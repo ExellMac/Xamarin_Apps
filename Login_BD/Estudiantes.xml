@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginBD.Estudiantes" 
+             Title="Estudiantes">
+    <ContentPage.Content>
+
+        <ScrollView>
+
+            <StackLayout BackgroundColor="#191919">
+
+                <!--Header-->
+
+                <Frame BackgroundColor="#1B2025" BorderColor="#4472C4" Margin="10">
+
+                    <Label Text="Estudiantes!"
+                               HorizontalTextAlignment="Center"
+                               TextColor="White" FontSize="35"/>
+                </Frame>
+
+                <BoxView HeightRequest="2" BackgroundColor="White" Margin="10"></BoxView>
+
+                <!--Studients List-->
+                <!--Butcher-->
+                <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#4472C4" Margin="5">
+
+                    <FlexLayout Direction="Row" Margin="10"  JustifyContent="SpaceAround">
+
+                        <Image Source="butch" WidthRequest="130" Margin="0,5,2,5"></Image>
+
+                        <Label Text="Butch Fleischauer Cordero &#10;21-MISM-1-076"
+                               FontSize="17" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                               FontAttributes="Bold"></Label>
+
+                    </FlexLayout>
+
+                </Frame>
+
+
+                <!--Raudi-->
+                <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#4472C4" Margin="5">
+
+                    <FlexLayout Direction="Row" Margin="10"  JustifyContent="SpaceAround">
+
+                        <Image Source="raudi" WidthRequest="130" Margin="0,5,2,5"></Image>
+
+                        <Label Text="Raudi Perez Pereyra &#10;21-MISM-1-035"
+                               FontSize="17" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                               FontAttributes="Bold"></Label>
+
+                    </FlexLayout>
+
+                </Frame>
+
+                <!--Elian-->
+                <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#4472C4" Margin="5">
+
+                    <FlexLayout Direction="Row" Margin="10"  JustifyContent="SpaceAround">
+
+                        <Image Source="Elian" WidthRequest="130" Margin="0,5,2,5"></Image>
+
+                        <Label Text="Elian Alba Jimenez &#10;21-MISM-1-066"
+                               FontSize="17" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                               FontAttributes="Bold"></Label>
+
+                    </FlexLayout>
+
+                </Frame>
+
+                
+                <!--Gigachad-->
+                <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#4472C4" Margin="5">
+
+                    <FlexLayout Direction="Row" Margin="10"  JustifyContent="SpaceAround">
+
+                        <Image Source="gigachad" WidthRequest="130" Margin="0,5,2,5"></Image>
+
+                        <Label Text="GigaChad &#10;35-GIGA-1-chad"
+                               FontSize="17" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                               FontAttributes="Bold"></Label>
+
+                    </FlexLayout>
+
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
