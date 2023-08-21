@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calificacion.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="FieldTitle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+
+            <Style x:Key="FieldsContainer" TargetType="Frame">
+                <Setter Property="BorderColor" Value="#2DC56C"></Setter>
+                <Setter Property="Margin" Value="0,10"></Setter>
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="CornerRadius" Value="10"></Setter>
+            </Style>
+
+            <Style x:Key="Fields" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="#7F7F7F"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#9BAFD9" Offset="0.1"/>
+                    <GradientStop Color="#191919" Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Image Source="oymlogo" WidthRequest="200" HorizontalOptions="Center"></Image>
+
+
+
+            <Frame BorderColor="White" CornerRadius="5" BackgroundColor="#1B2025" Margin="15">
+                <StackLayout HorizontalOptions="Center">
+                    <Image Source="grades" WidthRequest="150"/>
+
+                    <Label Text="Calificaciones" TextColor="White" FontSize="44" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+
+                    <BoxView HeightRequest="2" BackgroundColor="White" Margin="0,10"></BoxView>
+
+
+                    <!--Matricula-->
+                    <Label Text="Matricula" Style="{StaticResource FieldTitle}" ></Label>
+
+                    <Frame BorderColor="#2DC56C" Style="{StaticResource FieldsContainer}">
+                        <Entry Placeholder="Ingrese Matricula" Style="{StaticResource Fields}"  x:Name="txtMatricula"></Entry>
+                    </Frame>
+
+
+                    <!--Password-->
+                    <Label Text="Contraseña" Style="{StaticResource FieldTitle}" ></Label>
+
+                    <Frame BorderColor="#2DC56C" Style="{StaticResource FieldsContainer}">
+                        <Entry Placeholder="Ingrese Password" Style="{StaticResource Fields}" IsPassword="True" x:Name="txtPassword"></Entry>
+                    </Frame>
+
+
+                    <!--Nota Asistencia-->
+                    <Label Text="Nota de Asistencia" Style="{StaticResource FieldTitle}" ></Label>
+
+                    <Frame BorderColor="#2DC56C" Style="{StaticResource FieldsContainer}">
+                        <Entry Placeholder="Ingresa Nota de Asistencia" Style="{StaticResource Fields}" Keyboard="Numeric" x:Name="txtAsistencia"></Entry>
+                    </Frame>
+
+
+                    <!--Nota Trabajo Practico-->
+                    <Label Text="Nota Trabajo Práctico" Style="{StaticResource FieldTitle}" ></Label>
+
+                    <Frame BorderColor="#2DC56C" Style="{StaticResource FieldsContainer}">
+                        <Entry Placeholder="Ingresa Nota Practicas" Style="{StaticResource Fields}" Keyboard="Numeric" x:Name="txtPractica"></Entry>
+                    </Frame>
+
+
+                    <!--Nota Examen Parcial-->
+                    <Label Text="Nota Examen Parcial" Style="{StaticResource FieldTitle}" ></Label>
+
+                    <Frame BorderColor="#2DC56C" Style="{StaticResource FieldsContainer}">
+                        <Entry Placeholder="Ingresa Nota Examen Parcial" Style="{StaticResource Fields}" Keyboard="Numeric" x:Name="txtParcial"></Entry>
+                    </Frame>
+
+
+                    <!--Nota Examen Final-->
+                    <Label Text="Nota Examen Final" Style="{StaticResource FieldTitle}" ></Label>
+
+                    <Frame BorderColor="#2DC56C" Style="{StaticResource FieldsContainer}">
+                        <Entry Placeholder="Ingresa Nota Examen Final" Style="{StaticResource Fields}" Keyboard="Numeric" x:Name="txtFinal"></Entry>
+                    </Frame>
+
+                    
+                    
+                    <Button Text="Calcular Nota" TextColor="White" BackgroundColor="#2DC56C" Margin="10" CornerRadius="40" 
+                            WidthRequest="130" FontSize="16" FontAttributes="Bold" x:Name="btnCalcularNota" Clicked="btnObtenerCalificacion"></Button>
+
+                    <Frame BorderColor="White" CornerRadius="5" BackgroundColor="#1B2025" Margin="15">
+                        <StackLayout HorizontalOptions="Center">
+
+                            <Label Text="Nota Final:" FontSize="20" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+                            <Label x:Name="txtNotaFinal"  FontSize="18" TextColor="#2DC56C" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+
+                            <Label Text="Equivalencia en Letra:" FontSize="20" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+                            <Label x:Name="txtLetra"  FontSize="18" TextColor="#2DC56C" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+
+
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </Frame>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
