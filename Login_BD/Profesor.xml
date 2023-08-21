@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginBD.Profesor"
+             Title="Profesor">
+   
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout BackgroundColor="#191919">
+
+                <Frame BackgroundColor="#1B2025" BorderColor="#4472C4" Margin="10">
+
+                    <Label Text="Bienvenido: &#10;Juancito Peña V.!"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White" FontSize="35"/>
+                </Frame>
+
+
+
+                <Image Source="teacher.png" Margin="10"/>
+
+
+
+
+
+                <FlexLayout Direction="Column" HorizontalOptions="Center" JustifyContent="Center" AlignItems="Center">
+                    
+                    <Button Text="Quemar Estudiantes" WidthRequest="200" CornerRadius="30" BorderColor="White" BorderWidth="2"
+                            FontSize="18" FontAttributes="Bold" TextColor="White" BackgroundColor="#C00000"></Button>
+                   
+                    <Image Source="mario.png" WidthRequest="150" Margin="10"/>
+
+                    
+                </FlexLayout>
+                
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
