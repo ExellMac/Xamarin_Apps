@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginBD.MainPage"
+             Title="Login">
+
+    <ScrollView>
+    
+        <StackLayout>
+            <StackLayout.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#9BAFD9" Offset="0.1"/>
+                        <GradientStop Color="#103783" Offset="1.0"/>
+                    </LinearGradientBrush>
+            </StackLayout.Background>
+            
+            <!--Header Section-->
+
+            <Image Source="oymlogo" WidthRequest="200" HorizontalOptions="Center"></Image>
+
+            <BoxView HeightRequest="2" BackgroundColor="White" Margin="10"></BoxView>
+
+            <Label Text="PDM-742" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="#044072"
+                   FontSize="25"></Label>
+
+            
+            <!--Login Section-->
+            
+            <Frame BorderColor="White" CornerRadius="5" BackgroundColor="Black" >
+                <StackLayout HorizontalOptions="Center">
+                    <Image Source="securityLogo.png" WidthRequest="150"/>
+
+                    <Label Text="Login" TextColor="White" FontSize="48" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+                
+                    <BoxView HeightRequest="2" BackgroundColor="White" Margin="10"></BoxView>
+
+                    <Frame BorderColor="#2DC56C" Margin="10,10" BackgroundColor="Transparent" CornerRadius="30">
+                        <Entry Placeholder="Username" PlaceholderColor="#7F7F7F" TextColor="white" x:Name="txtUsername"></Entry>
+                    </Frame>
+
+                    <Frame BorderColor="#2DC56C" Margin="10,0" BackgroundColor="Transparent" CornerRadius="30">
+                        <Entry Placeholder="Password" PlaceholderColor="#7F7F7F" TextColor="white" IsPassword="True" x:Name="txtPassword"></Entry>
+                    </Frame>
+
+                    <FlexLayout Direction="Row" JustifyContent="SpaceAround">
+                    
+                        <Button Text="Sign in" TextColor="White" BackgroundColor="#2DC56C" Margin="10" CornerRadius="40" 
+                                WidthRequest="130" x:Name="btnLogin" Clicked="btnLogin_Clicked"></Button>
+
+                        <Button Text="Close" TextColor="White" BackgroundColor="#C00000"  Margin="10" CornerRadius="40" 
+                                WidthRequest="130" x:Name="btnSalir"  Clicked="btnSalir_Clicked"></Button>
+
+                    </FlexLayout>
+
+                </StackLayout>
+            </Frame>
+
+
+            <!--Descripcion OYM Section -->
+
+            <Label TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+
+            <StackLayout HorizontalOptions="Center" Margin="0,0,0,30">
+
+                <Label Text="Descripción" FontAttributes="Bold" 
+                       TextColor="White" FontSize="36" HorizontalTextAlignment="Center"></Label>
+                
+                <Image Source="rAbinader.gif" WidthRequest="250"/>
+
+                
+                <Label Text="La Universidad Dominicana OYM es un centro privado de educacion superior de la Republica Dominicana. Fundada el 12 de enero de 1966, selecto por un grupo de profesores y docents encabezados por el Dr. Jose Rafael Abinader."
+                       TextColor="White" FontSize="16" HorizontalTextAlignment="Center"></Label>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+    
+</ContentPage>
