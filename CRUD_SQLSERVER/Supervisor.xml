@@ -1,0 +1,88 @@
+<ScrollView>
+
+            <StackLayout BackgroundColor="#191919" Padding="10">
+
+                <Frame BackgroundColor="#1B2025" BorderColor="#4472C4" Margin="10">
+                    <Label Text="¡Bienvenido! Supervisor" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Margin="0" />
+                </Frame>
+
+
+                    <Image Source="supervisor.png" WidthRequest="340"/>
+
+                <!-- Input Name, Email, Number -->
+
+                <Frame BorderColor="#2DC56C" Margin="5" BackgroundColor="Transparent" CornerRadius="30">
+                    <Entry Placeholder="Introduzca el Criterio a Buscar" x:Name="id_usuario" HorizontalTextAlignment="Center"
+                            PlaceholderColor="Gray" FontAttributes="Bold" TextColor="White"/>
+                </Frame>
+
+                <Frame BorderColor="#2DC56C" Margin="5" BackgroundColor="White" CornerRadius="30">
+                    <Entry Placeholder="Nombre de Usuario" x:Name="nombre_user" IsEnabled="False" HorizontalTextAlignment="Center"
+                           PlaceholderColor="Gray" FontAttributes="Bold" TextColor="White"/>
+                </Frame>
+
+                <Frame BorderColor="#2DC56C" Margin="5" BackgroundColor="White" CornerRadius="30">
+                    <Entry Placeholder="Teléfono" x:Name="telefono" IsEnabled="False" HorizontalTextAlignment="Center"
+                           PlaceholderColor="Gray" FontAttributes="Bold" TextColor="White"/>
+                </Frame>
+
+                <Frame BorderColor="#2DC56C" Margin="5" BackgroundColor="White" CornerRadius="30">
+                    <Entry Placeholder="Correo" x:Name="email" IsEnabled="False" HorizontalTextAlignment="Center"
+                           PlaceholderColor="Gray" FontAttributes="Bold" TextColor="White"/>
+                </Frame>
+
+ 
+                <Label x:Name="resultadoBusqueda" Text="" TextColor="White"/>
+
+
+                <Button Text="Clear" Clicked="LimpiarButton_Clicked" BackgroundColor="Yellow" Margin="10" CornerRadius="10"/>
+                <Button Text="🌎 Test Conection"  BackgroundColor="#2196F3" TextColor="White" Margin="10" CornerRadius="10" Clicked="Button_Clicked"/>
+
+        
+                <Grid Grid.Row="2" RowDefinitions="Auto,Auto" ColumnDefinitions="*,*" Margin="10,0">
+                    <Button Grid.Row="0" Grid.Column="0"  Text="📚 Show Data" BackgroundColor="#1e3799" TextColor="White" x:Name="getbutton" Clicked="Getbutton_Clicked" />
+                    <Button Grid.Row="0" Grid.Column="1"  Text="🔍 Search" BackgroundColor="#48dbfb" TextColor="White"  x:Name="Buscar" Clicked="Buscar_Clicked" />
+                </Grid>
+
+
+                <StackLayout>
+                    <Button Text="Salir" TextColor="White"
+                    HorizontalOptions="Center"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="#C00000"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    BorderWidth="2"
+                    BorderColor="LightYellow"
+                    CornerRadius="25" 
+                    x:Name="Salir"
+                    Clicked="Salir_Clicked"/>
+                </StackLayout>
+
+                <!-- ListView List-->
+                <ListView Grid.Row="3" x:Name="MyListView" HasUnevenRows="True" Margin="1" BackgroundColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <!-- Grid. Details of each one -->
+                                <Grid RowDefinitions="Auto" ColumnDefinitions="1*, 3*, 4*, 6*" Padding="1" Margin="2" BackgroundColor="Transparent">
+                                    <Frame Grid.Row="0" Grid.Column="0" BorderColor="white" Padding="5" BackgroundColor="Transparent">
+                                        <Label Text="{Binding Id_usuario}" TextColor="#2DC56C" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    </Frame>
+                                    <Frame Grid.Row="0" Grid.Column="1" BorderColor="white" Padding="5" BackgroundColor="Transparent">
+                                        <Label Text="{Binding Nombre_user}" TextColor="#2DC56C" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    </Frame>
+                                    <Frame Grid.Row="0" Grid.Column="2" BorderColor="white" Padding="5" BackgroundColor="Transparent">
+                                        <Label Text="{Binding Telefono}" TextColor="#2DC56C" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    </Frame>
+                                    <Frame Grid.Row="0" Grid.Column="3" BorderColor="white" Padding="5" BackgroundColor="Transparent">
+                                        <Label Text="{Binding Email}" TextColor="#2DC56C" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
