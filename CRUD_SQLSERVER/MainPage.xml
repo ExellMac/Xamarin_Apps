@@ -1,0 +1,41 @@
+<ScrollView>
+        <StackLayout BackgroundColor="#191919">
+
+            <Frame BorderColor="White" CornerRadius="10" BackgroundColor="Transparent" Margin="10">
+
+                <StackLayout HorizontalOptions="Center">
+
+                    <Image Source="securityLogo.png" WidthRequest="150"/>
+
+                    <Label Text="Login" TextColor="White" FontSize="48" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+
+                    <BoxView HeightRequest="2" BackgroundColor="White" Margin="10"></BoxView>
+
+                    <Frame BorderColor="#2DC56C" Margin="10,10" BackgroundColor="Transparent" CornerRadius="30">
+                        <Entry Placeholder="Username" PlaceholderColor="#7F7F7F" TextColor="white"  x:Name="txtUsuario"></Entry>
+                    </Frame>
+
+                    <Frame BorderColor="#2DC56C" Margin="10,0" BackgroundColor="Transparent" CornerRadius="30">
+                        <Entry Placeholder="Password" PlaceholderColor="#7F7F7F" TextColor="white" IsPassword="True" x:Name="txtPassword"></Entry>
+                    </Frame>
+
+
+
+                    <FlexLayout Direction="Row" JustifyContent="SpaceAround">
+
+                        <Button Text="✅ Log In" TextColor="White" BackgroundColor="#2DC56C" Margin="10" CornerRadius="40" 
+                                    WidthRequest="130" x:Name="btnLogin" Clicked="btnLogin_Clicked"></Button>
+
+                        <Button Text="❌ Close" TextColor="White" BackgroundColor="#C00000"  Margin="10" CornerRadius="40" 
+                                    WidthRequest="130"   x:Name="btnSalir" Clicked="btnSalir_Clicked"></Button>
+
+                    </FlexLayout>
+
+                </StackLayout>
+
+            </Frame>
+
+
+        </StackLayout>
+
+    </ScrollView>
