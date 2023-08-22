@@ -1,0 +1,83 @@
+ <ScrollView>
+            <StackLayout BackgroundColor="#191919" Padding="9">
+
+                <Frame BackgroundColor="#1B2025" BorderColor="#4472C4" Margin="10">
+                    <Label Text="¡Welcome! Seller" HorizontalTextAlignment="Center" TextColor="White" FontSize="32" Margin="0" />
+                </Frame>
+
+                <!-- Article Selector -->
+
+                <Frame BackgroundColor="White" BorderColor="#4472C4" Margin="10" CornerRadius="10">
+                    <Picker x:Name="ArticuloPicker" Title="Choose Article" SelectedIndexChanged="ArticuloPicker_SelectedIndexChanged" 
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White">
+                        
+                        <!-- Config Picker -->
+                        <Picker.ItemDisplayBinding>
+                            <Binding Path="Nombre" />
+                        </Picker.ItemDisplayBinding>
+                    </Picker>
+                </Frame>
+
+                <!-- Tag. Selected Article -->
+                <Frame BackgroundColor="#1B2025" BorderColor="#4472C4" Margin="10" CornerRadius="10">
+                    <Label Text="Price:" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="22" />
+                </Frame>
+
+                <!-- Tag. Article Price -->
+                <Label x:Name="PrecioLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="25"  TextColor="#4472C4"/>
+
+                <!-- Input Quantity of Articles -->
+                <Frame BackgroundColor="#1B2025" BorderColor="#4472C4" Margin="10" CornerRadius="10">
+                    <Entry Placeholder="Quantity" Keyboard="Numeric" x:Name="CantidadEntry"  
+                           PlaceholderColor="Gray"  HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="22"  TextColor="#44bd32"/>
+                </Frame>
+
+                <FlexLayout Direction="Row" JustifyContent="SpaceEvenly" Margin="15,0">
+                    <Button Text="Add Sale" Clicked="AgregarVenta_Clicked"
+                        BackgroundColor="#44bd32" TextColor="White"
+                        WidthRequest="170"
+                        Margin="10" CornerRadius="40"
+                        BorderColor="White" BorderWidth="2" 
+                        FontSize="18"
+                        />
+
+
+                    <Button Text="List Sales" Clicked="ListarVentas_Clicked"
+                            BackgroundColor="#3498db" TextColor="White"
+                            WidthRequest="170"
+                            Margin="10" 
+                            CornerRadius="40"
+                            BorderColor="White" BorderWidth="2" 
+                            FontSize="18"/>
+
+
+                </FlexLayout>
+
+
+                <Label Text="Sales List: " FontSize="25" TextColor="#4472C4" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+
+
+                <Label x:Name="TotalVentasLabel" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+
+                <ListView x:Name="VentasListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <!-- Horizontal Layout  -->
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding NombreArticulo}" HorizontalOptions="FillAndExpand" TextColor="White"/>
+                                    <Label Text="{Binding Cantidad}" HorizontalOptions="FillAndExpand" TextColor="White"/>
+                                    <Label Text="{Binding Precio}" HorizontalOptions="FillAndExpand" TextColor="White"/>
+                                    <Label Text="{Binding Monto}" HorizontalOptions="FillAndExpand" TextColor="White"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+
+        </ScrollView>
