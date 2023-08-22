@@ -1,0 +1,37 @@
+<ScrollView>
+            <StackLayout BackgroundColor="#191919" Padding="9">
+
+                <Frame BackgroundColor="#1B2025" BorderColor="#4472C4" Margin="10">
+
+                    <Label Text="Bienvenido Administrador: &#10;Juancito Peña V.!"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White" FontSize="25"/>
+                </Frame>
+                
+                
+               
+                <Frame BackgroundColor="Transparent" >
+                    <Image Source="https://advisertecnology.com/wp-content/uploads/2021/08/portadajpv.png" 
+                           HorizontalOptions="Center" />
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Margin="0,0,0,0">
+                    <Image Source="teacher.png" 
+                           HorizontalOptions="Center" />
+                </Frame>
+
+
+                <FlexLayout Direction="Row" JustifyContent="SpaceEvenly" Margin="15,10,15,30">
+
+                    <Button Text="Operations" TextColor="Black" BackgroundColor="#2DC56C" Margin="10" CornerRadius="40" 
+                            WidthRequest="150" BorderColor="White" BorderWidth="2" 
+                            x:Name="btncrud" Clicked="btncrud_Clicked"></Button>
+
+                    <Button Text="Close" TextColor="White" BackgroundColor="#C00000"  Margin="10" CornerRadius="40" 
+                            WidthRequest="150" BorderColor="White" BorderWidth="2"  
+                            x:Name="Salir" Clicked="Salir_Clicked"></Button>
+
+                </FlexLayout>
+
+            </StackLayout>
+        </ScrollView>
